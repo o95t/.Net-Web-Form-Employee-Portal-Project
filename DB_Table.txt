@@ -1,0 +1,85 @@
+USE [TASK]
+GO
+
+/****** Object:  Table [dbo].[DEPARTMNTS]    Script Date: 8/26/2018 5:58:23 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[DEPARTMNTS](
+	[DNO] [int] IDENTITY(1,1) NOT NULL,
+	[DEPT_NAME] [varchar](50) NULL,
+	[MGR_SSN] [int] NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+/****** Object:  Table [dbo].[EMPLOYES]    Script Date: 8/26/2018 5:58:23 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[EMPLOYES](
+	[SSN] [int] IDENTITY(1,1) NOT NULL,
+	[NAME] [varchar](50) NULL,
+	[USERNAME] [varchar](50) NULL,
+	[PASSWORD] [varchar](50) NULL,
+	[SALARY] [int] NULL,
+	[DNO] [int] NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+/****** Object:  Table [dbo].[HOURS_LOG]    Script Date: 8/26/2018 5:58:23 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[HOURS_LOG](
+	[SSN] [int] NULL,
+	[PNO] [int] NULL,
+	[HOURS] [int] NULL
+) ON [PRIMARY]
+
+GO
+
+/****** Object:  Table [dbo].[PROJECTS]    Script Date: 8/26/2018 5:58:23 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[PROJECTS](
+	[PNO] [int] IDENTITY(1,1) NOT NULL,
+	[LOCATION] [varchar](50) NULL,
+	[PROJ_NAME] [varchar](50) NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+

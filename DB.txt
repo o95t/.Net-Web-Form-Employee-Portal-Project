@@ -1,0 +1,442 @@
+USE [TASK]
+GO
+
+/****** Object:  StoredProcedure [dbo].[DELETE_DEPARTMNTS]    Script Date: 8/26/2018 8:18:16 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[DELETE_DEPARTMNTS]
+(
+@ID     INT
+)
+AS
+BEGIN 
+
+DELETE FROM [dbo].[DEPARTMNTS] WHERE DNO=@ID  ;
+END;
+GO
+
+/****** Object:  StoredProcedure [dbo].[DELETE_employee]    Script Date: 8/26/2018 8:18:16 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+create procedure [dbo].[DELETE_employee]
+(
+@P_SSN    INT
+
+)
+as
+begin 
+
+DELETE FROM [dbo].[EMPLOYES]
+where  SSN=@P_SSN ;  
+
+end;
+GO
+
+/****** Object:  StoredProcedure [dbo].[DELETE_HOURS]    Script Date: 8/26/2018 8:18:16 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[DELETE_HOURS]
+(
+ @SSN     INT
+,@PNO   INT
+)
+AS
+BEGIN 
+
+DELETE FROM [dbo].[HOURS_LOG] WHERE [PNO]=@PNO and [SSN]=@SSN;
+END;
+GO
+
+/****** Object:  StoredProcedure [dbo].[DELETE_HOURS_LOG]    Script Date: 8/26/2018 8:18:16 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[DELETE_HOURS_LOG]
+(
+@P_SSN    INT
+,@P_PNO    INT
+)
+AS
+BEGIN 
+
+DELETE FROM [dbo].[HOURS_LOG]  WHERE [SSN]=@P_SSN  AND [PNO]=@P_PNO;
+END;
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[DELETE_PROJECTS]    Script Date: 8/26/2018 8:18:16 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[DELETE_PROJECTS]
+(
+@ID     INT
+)
+AS
+BEGIN 
+
+DELETE FROM [dbo].[PROJECTS] WHERE PNO=@ID  ;
+END;
+GO
+
+/****** Object:  StoredProcedure [dbo].[GET_DEPARTMNTS]    Script Date: 8/26/2018 8:18:16 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE procedure [dbo].[GET_DEPARTMNTS]
+as
+begin 
+SELECT * FROM [dbo].[DEPARTMNTS];
+end;
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[GET_employee]    Script Date: 8/26/2018 8:18:16 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE procedure [dbo].[GET_employee]
+
+as
+begin 
+SELECT 
+[SSN]
+,[NAME],[USERNAME],[PASSWORD],[SALARY],[DNO]
+FROM  [dbo].[EMPLOYES];
+end;
+GO
+
+/****** Object:  StoredProcedure [dbo].[GET_HOURS]    Script Date: 8/26/2018 8:18:16 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE procedure [dbo].[GET_HOURS]
+as
+begin 
+SELECT	EMPLOYES.SSN , EMPLOYES.NAME ,PROJECTS.PROJ_NAME, HOURS_LOG.HOURS ,PROJECTS.PNO
+	FROM	EMPLOYES , HOURS_LOG ,PROJECTS
+	where HOURS_LOG.SSN=EMPLOYES.SSN and HOURS_LOG.PNO=PROJECTS.PNO;
+end;
+GO
+
+/****** Object:  StoredProcedure [dbo].[GET_Projcts]    Script Date: 8/26/2018 8:18:16 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE procedure [dbo].[GET_Projcts]
+as
+begin 
+SELECT * FROM [dbo].[DEPARTMNTS];
+end;
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[GET_PROJECTS]    Script Date: 8/26/2018 8:18:16 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE procedure [dbo].[GET_PROJECTS]
+as
+begin 
+select * from [dbo].[PROJECTS];
+end;
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[insert_DEPARTMNTS]    Script Date: 8/26/2018 8:18:16 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE procedure [dbo].[insert_DEPARTMNTS]
+(
+@p_DEPT_name    varchar(50)
+,@MGRSSN    INT
+
+)
+as
+begin 
+
+insert into [dbo].[DEPARTMNTS]values (
+@p_DEPT_name, @MGRSSN  
+);
+end;
+GO
+
+/****** Object:  StoredProcedure [dbo].[insert_employee]    Script Date: 8/26/2018 8:18:16 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE procedure [dbo].[insert_employee]
+(
+@p_name    varchar(50)
+,@usernaem    varchar(50)
+,@p_Password    varchar(50)
+,@p_salary    INT
+,@p_Dno    INT
+)
+as
+begin 
+
+insert into [dbo].[EMPLOYES] values (
+@p_name    
+,@usernaem    
+,@p_Password    
+,@p_salary    
+,@p_Dno    
+);
+end;
+GO
+
+/****** Object:  StoredProcedure [dbo].[insert_HOURS]    Script Date: 8/26/2018 8:18:16 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE procedure [dbo].[insert_HOURS]
+(
+ @SSN     INT
+,@PNO   INT
+,@HOURS INT
+
+)
+as
+begin 
+
+insert into [dbo].[HOURS_LOG]values (
+@SSN  ,@PNO ,@HOURS
+);
+end;
+GO
+
+/****** Object:  StoredProcedure [dbo].[insert_HOURS_LOG]    Script Date: 8/26/2018 8:18:16 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE procedure [dbo].[insert_HOURS_LOG]
+(
+ @P_SSN    INT
+,@P_PNO    INT
+,@P_HOURS    INT
+
+)
+as
+begin 
+
+insert into [dbo].[HOURS_LOG] values (
+@P_SSN   
+,@P_PNO    
+,@P_HOURS 
+);
+end;
+GO
+
+/****** Object:  StoredProcedure [dbo].[insert_PROJECTS]    Script Date: 8/26/2018 8:18:16 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE procedure [dbo].[insert_PROJECTS]
+(
+ @LOCATION     varchar(50)
+,@PROJECNAME   varchar(50)
+
+)
+as
+begin 
+
+insert into [dbo].[PROJECTS]values (
+@LOCATION  ,@PROJECNAME  
+);
+end;
+GO
+
+
+
+/****** Object:  StoredProcedure [dbo].[Logn]    Script Date: 8/26/2018 8:18:16 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[Logn]
+(
+@uname NVARCHAR(50),  @pass NVARCHAR(50)
+,@result int OUTPUT    
+)
+AS
+BEGIN
+SELECT @result= COUNT(*) 
+FROM [dbo].[EMPLOYES]
+WHERE upper(USERNAME)=upper(@uname) AND [PASSWORD]=@pass
+end
+GO
+
+/****** Object:  StoredProcedure [dbo].[UPDATE_DEPARTMNTS]    Script Date: 8/26/2018 8:18:16 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE procedure [dbo].[UPDATE_DEPARTMNTS]
+(
+@ID     INT,
+@p_DEPT_name    varchar(50)
+,@MGRSSN    INT
+
+)
+as
+begin 
+
+UPDATE [dbo].[DEPARTMNTS] SET [DEPT_NAME]=@p_DEPT_name,[MGR_SSN]=@MGRSSN where [DNO]=@ID;
+end;
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[Update_employee]    Script Date: 8/26/2018 8:18:16 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE procedure [dbo].[Update_employee]
+(
+@P_SSN    INT
+,@p_name    varchar(50)
+,@usernaem    varchar(50)
+,@p_Password    varchar(50)
+,@p_salary    INT
+,@p_Dno    INT
+)
+as
+begin 
+
+update  [dbo].[EMPLOYES] set
+
+ [NAME]=@p_name    
+,[USERNAME]=@usernaem    
+,[PASSWORD]=@p_Password    
+,[SALARY]=@p_salary    
+,[DNO]=@p_Dno 
+
+where  SSN=@P_SSN;   
+
+end;
+GO
+
+/****** Object:  StoredProcedure [dbo].[UPDATE_HOURS]    Script Date: 8/26/2018 8:18:16 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE procedure [dbo].[UPDATE_HOURS]
+(
+ @SSN     INT
+,@PNO   INT
+,@HOURS INT
+
+)
+as
+begin 
+
+UPDATE [dbo].[HOURS_LOG] SET [SSN]=@SSN,[PNO]=@PNO ,[HOURS]=@HOURS where [PNO]=@PNO and [SSN]=@SSN;
+end;
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[UPDATE_HOURS_LOG]    Script Date: 8/26/2018 8:18:16 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE procedure [dbo].[UPDATE_HOURS_LOG]
+(
+ @P_SSN    INT
+,@P_PNO    INT
+,@P_HOURS    INT
+)
+as
+begin 
+
+UPDATE [dbo].[HOURS_LOG] SET [SSN]=@p_SSN,[PNO]=@p_PNO,[HOURS]=@P_HOURS where [SSN]=@P_SSN  AND [PNO]=@P_PNO;
+end;
+GO
+
+/****** Object:  StoredProcedure [dbo].[UPDATE_PROJECTS]    Script Date: 8/26/2018 8:18:16 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE procedure [dbo].[UPDATE_PROJECTS]
+(
+@ID INT,
+@p_LOCATION    varchar(50)
+,@p_PROJ_NAME    varchar(50)
+
+)
+as
+begin 
+
+UPDATE [dbo].[PROJECTS] SET [LOCATION]=@p_LOCATION,[PROJ_NAME]=@p_PROJ_NAME where [PNO]=@ID;
+end;
+
+
+GO
+
+

@@ -1,0 +1,42 @@
+c:\users\dell\documents\visual studio 2017\Projects\EmployeeComponant\EmployeeComponant\bin\Debug\EmployeeComponant.dll.config
+c:\users\dell\documents\visual studio 2017\Projects\EmployeeComponant\EmployeeComponant\bin\Debug\EmployeeComponant.dll
+c:\users\dell\documents\visual studio 2017\Projects\EmployeeComponant\EmployeeComponant\bin\Debug\EmployeeComponant.pdb
+c:\users\dell\documents\visual studio 2017\Projects\EmployeeComponant\EmployeeComponant\bin\Debug\EntityFramework.dll
+c:\users\dell\documents\visual studio 2017\Projects\EmployeeComponant\EmployeeComponant\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\dell\documents\visual studio 2017\Projects\EmployeeComponant\EmployeeComponant\bin\Debug\EntityFramework.SqlServerCompact.dll
+c:\users\dell\documents\visual studio 2017\Projects\EmployeeComponant\EmployeeComponant\bin\Debug\System.Data.SqlServerCe.dll
+c:\users\dell\documents\visual studio 2017\Projects\EmployeeComponant\EmployeeComponant\bin\Debug\EntityFramework.xml
+c:\users\dell\documents\visual studio 2017\Projects\EmployeeComponant\EmployeeComponant\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\dell\documents\visual studio 2017\Projects\EmployeeComponant\EmployeeComponant\bin\Debug\EntityFramework.SqlServerCompact.xml
+c:\users\dell\documents\visual studio 2017\Projects\EmployeeComponant\EmployeeComponant\obj\Debug\EmployeeComponant.dll
+c:\users\dell\documents\visual studio 2017\Projects\EmployeeComponant\EmployeeComponant\obj\Debug\EmployeeComponant.pdb
+C:\Users\omar\Desktop\EmployeeComponant\EmployeeComponant\bin\Debug\EmployeeComponant.dll.config
+C:\Users\omar\Desktop\EmployeeComponant\EmployeeComponant\bin\Debug\EmployeeComponant.dll
+C:\Users\omar\Desktop\EmployeeComponant\EmployeeComponant\bin\Debug\EmployeeComponant.pdb
+C:\Users\omar\Desktop\EmployeeComponant\EmployeeComponant\bin\Debug\EntityFramework.dll
+C:\Users\omar\Desktop\EmployeeComponant\EmployeeComponant\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\omar\Desktop\EmployeeComponant\EmployeeComponant\bin\Debug\EntityFramework.SqlServerCompact.dll
+C:\Users\omar\Desktop\EmployeeComponant\EmployeeComponant\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\omar\Desktop\EmployeeComponant\EmployeeComponant\bin\Debug\EntityFramework.xml
+C:\Users\omar\Desktop\EmployeeComponant\EmployeeComponant\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\omar\Desktop\EmployeeComponant\EmployeeComponant\bin\Debug\EntityFramework.SqlServerCompact.xml
+C:\Users\omar\Desktop\EmployeeComponant\EmployeeComponant\obj\Debug\EmployeeComponant.csprojAssemblyReference.cache
+C:\Users\omar\Desktop\EmployeeComponant\EmployeeComponant\obj\Debug\EmployeeComponant.csproj.CoreCompileInputs.cache
+C:\Users\omar\Desktop\EmployeeComponant\EmployeeComponant\obj\Debug\EmployeeComponant.csproj.CopyComplete
+C:\Users\omar\Desktop\EmployeeComponant\EmployeeComponant\obj\Debug\EmployeeComponant.dll
+C:\Users\omar\Desktop\EmployeeComponant\EmployeeComponant\obj\Debug\EmployeeComponant.pdb
+C:\Users\omar\Desktop\task-20180816T090815Z-001\EmployeeComponant\EmployeeComponant\bin\Debug\EmployeeComponant.dll.config
+C:\Users\omar\Desktop\task-20180816T090815Z-001\EmployeeComponant\EmployeeComponant\bin\Debug\EmployeeComponant.dll
+C:\Users\omar\Desktop\task-20180816T090815Z-001\EmployeeComponant\EmployeeComponant\bin\Debug\EmployeeComponant.pdb
+C:\Users\omar\Desktop\task-20180816T090815Z-001\EmployeeComponant\EmployeeComponant\bin\Debug\EntityFramework.dll
+C:\Users\omar\Desktop\task-20180816T090815Z-001\EmployeeComponant\EmployeeComponant\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\omar\Desktop\task-20180816T090815Z-001\EmployeeComponant\EmployeeComponant\bin\Debug\EntityFramework.SqlServerCompact.dll
+C:\Users\omar\Desktop\task-20180816T090815Z-001\EmployeeComponant\EmployeeComponant\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\omar\Desktop\task-20180816T090815Z-001\EmployeeComponant\EmployeeComponant\bin\Debug\EntityFramework.xml
+C:\Users\omar\Desktop\task-20180816T090815Z-001\EmployeeComponant\EmployeeComponant\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\omar\Desktop\task-20180816T090815Z-001\EmployeeComponant\EmployeeComponant\bin\Debug\EntityFramework.SqlServerCompact.xml
+C:\Users\omar\Desktop\task-20180816T090815Z-001\EmployeeComponant\EmployeeComponant\obj\Debug\EmployeeComponant.csproj.CoreCompileInputs.cache
+C:\Users\omar\Desktop\task-20180816T090815Z-001\EmployeeComponant\EmployeeComponant\obj\Debug\EmployeeComponant.csproj.CopyComplete
+C:\Users\omar\Desktop\task-20180816T090815Z-001\EmployeeComponant\EmployeeComponant\obj\Debug\EmployeeComponant.dll
+C:\Users\omar\Desktop\task-20180816T090815Z-001\EmployeeComponant\EmployeeComponant\obj\Debug\EmployeeComponant.pdb
+C:\Users\omar\Desktop\task-20180816T090815Z-001\EmployeeComponant\EmployeeComponant\obj\Debug\EmployeeComponant.csprojAssemblyReference.cache

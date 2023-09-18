@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="EmployeeForms.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+        <div class="container">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">TASK</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href=""http://localhost:52410/Forms/Employee.aspx"">Home</a></li>
+                            <li><a href="http://localhost:52410/Forms/Employee.aspx">Emplyee</a></li>
+                            <li><a href="http://localhost:52410/Forms/Department.aspx">Departments</a></li>
+                            <li><a href="http://localhost:52410/Forms/Hours.aspx">Hours</a></li>
+                            <li><a href="http://localhost:52410/Forms/Projects.aspx">Projects</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+
+                            <li>
+                         
+                                <asp:LinkButton ID="btnLogOut" OnClick="btnLogOut_Click" runat="server"> <span class="glyphicon glyphicon-log-out"></span>Log Out</asp:LinkButton>
+
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
